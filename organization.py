@@ -25,7 +25,8 @@ def move_songs_to_album_directory(album_key, album_songs, album_dirs, albums_pat
     for song, track in album_songs:
         _, title, _, _, _ = get_song_metadata(song)
         file_ext = os.path.splitext(song)[1]
-        new_song_name = f"{track.zfill(2)} {title}{file_ext}".lower()
+        new_title = title.replace('/', ' - ')
+        new_song_name = f"{track.zfill(2)} {new_title}{file_ext}".lower()
 
         if album_key not in album_dirs:
             album_dir = os.path.join(albums_path, album_key)
