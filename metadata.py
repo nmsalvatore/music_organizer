@@ -2,6 +2,7 @@ import logging
 from functools import lru_cache
 from tinytag import TinyTag
 
+
 @lru_cache(maxsize=None)  # Cache song metadata
 def get_song_metadata(filepath):
     try:

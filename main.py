@@ -1,6 +1,7 @@
 from utilities import setup_logging
 from gui import create_root_window
 
+
 def main():
     # Set up logging
     setup_logging()
